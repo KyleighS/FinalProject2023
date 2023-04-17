@@ -7,5 +7,13 @@ public class Target : MonoBehaviour
     public void TakeDmg(float amount)
     {
         health -= amount;
+        if(health <= 0f)
+        {
+            Die();
+        }
+    }
+    void Die()
+    {
+        Destroy(gameObject);
     }
 }
