@@ -17,5 +17,6 @@ public class EnemyFollow : MonoBehaviour
     void Update()
     {
         enemy.SetDestination(Player.position);
+
     }
 }
