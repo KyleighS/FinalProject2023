@@ -20,6 +20,7 @@ public class PauseMenu : MonoBehaviour
         if (Input.GetKeyUp(KeyCode.Escape))
         {
             PauseGame();
+            Cursor.visible = !cursor.activeSelf;
         }
     }
 
@@ -31,10 +32,12 @@ public class PauseMenu : MonoBehaviour
         if (pauseMenu.activeSelf)
         {
             Time.timeScale = 0f;
+            Cursor.lockState = CursorLockMode.Confined;
         }
         else
         {
             Time.timeScale = 1f;
+            Cursor.lockState = CursorLockMode.Locked;
         }
     }
 
