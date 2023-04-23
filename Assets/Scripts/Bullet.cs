@@ -6,11 +6,16 @@ public class Bullet : MonoBehaviour
 {
     public float life = 3f;
     public int dmg = 1;
-    public int targetNum = 3;
+    public int targetNum;
+
+    public GameObject doorClosed;
+    public GameObject doorOpen;
 
     void Awake()
     {
         Destroy(gameObject, life);
+        doorClosed.SetActive(true);
+        doorOpen.SetActive(false);
     }
     void OnCollisionEnter(Collision collision)
     {
@@ -22,22 +27,21 @@ public class Bullet : MonoBehaviour
         if(collision.gameObject.tag == "Target")
         {
             Destroy(gameObject);
-            TargetDown(targetNum, collision.transform);
+
+            //targetNum--;
+
+            /*if (targetNum <= 0)
+            {
+                doorClosed.SetActive(!doorClosed.activeSelf);
+                doorOpen.SetActive(!doorOpen.activeSelf);
+            }*/
         }
     }
 
     void Damage(Transform enemy)
     {
         EnemyHealth e = enemy.GetComponent<EnemyHealth>();
-        if(e != null)
-        {
-            e.TakeDamage(dmg);
-        }
+        e.TakeDamage(dmg);
     }
     
-    void TargetDown(int numLeft, Transform target)
-    {
-        numLeft--;
-        Door doors = door.GetComponent<Door>();
-    }
 }

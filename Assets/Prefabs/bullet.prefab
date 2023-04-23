@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 2158993133544265329}
   - component: {fileID: -8357112517083774161}
   - component: {fileID: 5018199872706957122}
-  - component: {fileID: 1061373571730059118}
+  - component: {fileID: 1637784452942694886}
   m_Layer: 0
   m_Name: bullet
   m_TagString: Untagged
@@ -115,8 +115,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   life: 3
---- !u!136 &1061373571730059118
-CapsuleCollider:
+  dmg: 1
+  targetNum: 1
+  doorClosed: {fileID: 620696403473554231, guid: e82d56616fbac6f4780b84de0fc49d10, type: 3}
+  doorOpen: {fileID: 3969166303644620810, guid: 7a977cb41995c8846bb1bf57c572bcfb, type: 3}
+--- !u!65 &1637784452942694886
+BoxCollider:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -125,7 +129,6 @@ CapsuleCollider:
   m_Material: {fileID: 0}
   m_IsTrigger: 0
   m_Enabled: 1
-  m_Radius: 0.020296574
-  m_Height: 0.040593147
-  m_Direction: 1
-  m_Center: {x: 0.000102996826, y: 0.00006723404, z: 0.0030293465}
+  serializedVersion: 2
+  m_Size: {x: 0.01468277, y: 0.014977774, z: 0.039072037}
+  m_Center: {x: -0.0001303355, y: -0.0000060399375, z: 0.0033597946}
