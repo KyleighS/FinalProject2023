@@ -80,7 +80,7 @@ GameObject:
   - component: {fileID: 640922081433212221}
   m_Layer: 0
   m_Name: Robot_Soldier_Red
-  m_TagString: Untagged
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -191,7 +191,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1f1bb8a45ec61e942afed2f3e8c92d30, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  enemy: {fileID: 0}
+  enemy: {fileID: 2543339875329234378}
   Player: {fileID: 0}
 --- !u!114 &640922081433212221
 MonoBehaviour:

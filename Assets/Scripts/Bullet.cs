@@ -6,7 +6,8 @@ public class Bullet : MonoBehaviour
 {
     public float life = 3f;
     public int dmg = 1;
-    public int targetNum;
+    public int targetNum = 1;
+    public int enemyHealth = 5;
 
     public GameObject doorClosed;
     public GameObject doorOpen;
@@ -14,34 +15,43 @@ public class Bullet : MonoBehaviour
     void Awake()
     {
         Destroy(gameObject, life);
-        doorClosed.SetActive(true);
-        doorOpen.SetActive(false);
+        //doorClosed.SetActive(true);
+        //doorOpen.SetActive(false);
     }
     void OnCollisionEnter(Collision collision)
     {
+        Debug.Log(collision.gameObject.name);
+
         if(collision.gameObject.tag == "Emeny")
         {
-            Damage(collision.transform);
+            /*enemyHealth -= 1;
+
+            if (enemyHealth == 0)
+            {
+                Destroy(collision.gameObject);
+            }*/
+
+            Destroy(collision.gameObject);
         }
 
         if(collision.gameObject.tag == "Target")
         {
+            targetNum--;
+
+            if (targetNum <= 0)
+            {
+                Debug.Log("Victory");
+                OpenDoor();
+            }
+
+            Destroy(collision.gameObject);
             Destroy(gameObject);
 
-            //targetNum--;
-
-            /*if (targetNum <= 0)
-            {
-                doorClosed.SetActive(!doorClosed.activeSelf);
-                doorOpen.SetActive(!doorOpen.activeSelf);
-            }*/
         }
     }
-
-    void Damage(Transform enemy)
+    void OpenDoor()
     {
-        EnemyHealth e = enemy.GetComponent<EnemyHealth>();
-        e.TakeDamage(dmg);
+        doorClosed.SetActive(!doorClosed.activeSelf);
+        doorOpen.SetActive(!doorOpen.activeSelf);
     }
-    
 }
