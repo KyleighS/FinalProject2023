@@ -7,6 +7,13 @@ public class PlayerController : MonoBehaviour
     //CharacterController handels the collisions and movement
     public CharacterController controller;
     public float speed = 1f;
+    public GameObject victory;
+    public GameObject cursor;
+
+    void Start()
+    {
+        Time.timeScale = 1f;
+    }
 
     // Update is called once per frame
     void Update()
@@ -33,4 +40,30 @@ public class PlayerController : MonoBehaviour
         controller.Move(motion);
 
     }
+
+    public void OnCollisionEnter(Collision collision)
+    {
+        if(collision.gameObject.tag == "NextLevel")
+        {
+            VictoryScreen();
+        }
+    }
+
+    public void VictoryScreen()
+    {
+        victory.SetActive(!victory.activeSelf);
+        cursor.SetActive(!cursor.activeSelf);
+
+        if (victory.activeSelf)
+        {
+            Time.timeScale = 0f;
+            Cursor.lockState = CursorLockMode.Confined;
+        }
+        else
+        {
+            Time.timeScale = 1f;
+            Cursor.lockState = CursorLockMode.Locked;
+        }
+    }
+
 }
