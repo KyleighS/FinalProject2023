@@ -1809,7 +1809,7 @@ NavMeshAgent:
   m_Enabled: 1
   m_AgentTypeID: 0
   m_Radius: 0.5
-  m_Speed: 3.5
+  m_Speed: 3
   m_Acceleration: 8
   avoidancePriority: 50
   m_AngularSpeed: 120
@@ -1833,9 +1833,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 18fbb0a5cf6425d4f9f7b5b89b5044ea, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  target: {fileID: 0}
-  range: 3
-  fireRate: 1
+  bullet: {fileID: 2313506833017175958, guid: 4c26536bce2ef0a469b045a09988ae82, type: 3}
+  bulletPos: {fileID: 340182450}
 --- !u!1 &1472528145733400
 GameObject:
   m_ObjectHideFlags: 0
