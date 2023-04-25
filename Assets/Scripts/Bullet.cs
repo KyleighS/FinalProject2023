@@ -22,17 +22,11 @@ public class Bullet : MonoBehaviour
     {
         Debug.Log(collision.gameObject.name);
 
-        if(collision.gameObject.tag == "Emeny")
+        /*if(collision.gameObject.tag == "Emeny")
         {
-            /*enemyHealth -= 1;
-
-            if (enemyHealth == 0)
-            {
-                Destroy(collision.gameObject);
-            }*/
-
-            Destroy(collision.gameObject);
-        }
+            Damage(dmg);
+            Destroy(gameObject);
+        }*/
 
         if(collision.gameObject.tag == "Target")
         {
@@ -49,6 +43,32 @@ public class Bullet : MonoBehaviour
 
         }
     }
+
+    void OnTriggerEnter(Collider other)
+    {
+        if (other.gameObject.CompareTag("Enemy"))
+        {
+            enemyHealth -= dmg;
+
+            if (enemyHealth <= 0)
+            {
+                Destroy(gameObject);
+            }
+
+            Destroy(gameObject);
+        }
+
+    }
+    /*void Damage(int dmg)
+    {
+        enemyHealth -= dmg;
+
+        if (enemyHealth <= 0)
+        {
+            Destroy(gameObject);
+        }
+    }*/
+
     void OpenDoor()
     {
         doorClosed.SetActive(!doorClosed.activeSelf);

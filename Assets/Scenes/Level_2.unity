@@ -8032,10 +8032,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: Robot_Soldier_White
       objectReference: {fileID: 0}
-    - target: {fileID: 1471741602374830, guid: 0814aba0a5f87494cb000251ab82361f, type: 3}
-      propertyPath: m_TagString
-      value: Enemy
-      objectReference: {fileID: 0}
     - target: {fileID: 4543829338664524, guid: 0814aba0a5f87494cb000251ab82361f, type: 3}
       propertyPath: m_RootOrder
       value: 2
@@ -8080,49 +8076,12 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 5318019062214704987, guid: 0814aba0a5f87494cb000251ab82361f, type: 3}
-      propertyPath: m_Size.x
-      value: 1.2159233
-      objectReference: {fileID: 0}
-    - target: {fileID: 5318019062214704987, guid: 0814aba0a5f87494cb000251ab82361f, type: 3}
-      propertyPath: m_Size.y
-      value: 1.9972363
-      objectReference: {fileID: 0}
-    - target: {fileID: 5318019062214704987, guid: 0814aba0a5f87494cb000251ab82361f, type: 3}
-      propertyPath: m_Size.z
-      value: 1.1125498
-      objectReference: {fileID: 0}
-    - target: {fileID: 5318019062214704987, guid: 0814aba0a5f87494cb000251ab82361f, type: 3}
-      propertyPath: m_Enabled
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 5318019062214704987, guid: 0814aba0a5f87494cb000251ab82361f, type: 3}
-      propertyPath: m_Center.x
-      value: 0.004693985
-      objectReference: {fileID: 0}
-    - target: {fileID: 5318019062214704987, guid: 0814aba0a5f87494cb000251ab82361f, type: 3}
-      propertyPath: m_Center.y
-      value: 0.99723625
-      objectReference: {fileID: 0}
-    - target: {fileID: 5318019062214704987, guid: 0814aba0a5f87494cb000251ab82361f, type: 3}
-      propertyPath: m_Center.z
-      value: 0.15004969
-      objectReference: {fileID: 0}
-    - target: {fileID: 6634531304186679599, guid: 0814aba0a5f87494cb000251ab82361f, type: 3}
-      propertyPath: enemy
-      value: 
-      objectReference: {fileID: 1490925374}
     - target: {fileID: 6634531304186679599, guid: 0814aba0a5f87494cb000251ab82361f, type: 3}
       propertyPath: Player
       value: 
       objectReference: {fileID: 1717750295}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 0814aba0a5f87494cb000251ab82361f, type: 3}
---- !u!195 &1490925374 stripped
-NavMeshAgent:
-  m_CorrespondingSourceObject: {fileID: 1488874387803152694, guid: 0814aba0a5f87494cb000251ab82361f, type: 3}
-  m_PrefabInstance: {fileID: 1490925373}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1500055632
 GameObject:
   m_ObjectHideFlags: 0
