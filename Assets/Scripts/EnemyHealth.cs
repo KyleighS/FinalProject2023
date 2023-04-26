@@ -4,11 +4,15 @@ using UnityEngine;
 
 public class EnemyHealth : MonoBehaviour
 {
-    public int health = 5;
+    [SerializeField] float health, maxHelth = 5;
 
-    public void TakeDamage(int dmg)
+    private void Start()
     {
-        health -= dmg;
+        health = maxHelth;
+    }
+    public void TakeDamage(float damageAmount)
+    {
+        health -= damageAmount;
 
         if(health <= 0)
         {

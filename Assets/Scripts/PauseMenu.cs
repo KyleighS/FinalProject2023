@@ -7,11 +7,14 @@ public class PauseMenu : MonoBehaviour
 {
     public GameObject pauseMenu;
     public GameObject cursor;
+    public AudioSource audio;
+    private float defaultPitch;
 
     // Start is called before the first frame update
     void Start()
     {
         Time.timeScale = 1f;
+        audio.pitch = 1;
     }
 
     // Update is called once per frame
@@ -31,11 +34,13 @@ public class PauseMenu : MonoBehaviour
 
         if (pauseMenu.activeSelf)
         {
+            audio.pitch = 0;
             Time.timeScale = 0f;
             Cursor.lockState = CursorLockMode.Confined;
         }
         else
         {
+            audio.pitch = 1;
             Time.timeScale = 1f;
             Cursor.lockState = CursorLockMode.Locked;
         }

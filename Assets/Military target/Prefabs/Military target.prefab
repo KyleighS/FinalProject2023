@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 33848685573292062}
   - component: {fileID: 23415105773652922}
   - component: {fileID: 36828175}
+  - component: {fileID: 7495933991560237994}
   m_Layer: 0
   m_Name: Military target
   m_TagString: Target
@@ -97,3 +98,19 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 0.051156327, y: 0.01265092, z: 0.10195307}
   m_Center: {x: 0, y: 0, z: -0.024601627}
+--- !u!114 &7495933991560237994
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1501084758933746}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ddd3f5381569ca2408b1708ef91c5736, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  closedDoor: {fileID: 0}
+  openDoor: {fileID: 0}
+  targets: 0
+  maxTargets: 2

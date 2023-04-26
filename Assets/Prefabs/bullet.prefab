@@ -115,10 +115,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   life: 3
-  dmg: 1
-  targetNum: 3
-  doorClosed: {fileID: 620696403473554231, guid: e82d56616fbac6f4780b84de0fc49d10, type: 3}
-  doorOpen: {fileID: 3969166303644620810, guid: 7a977cb41995c8846bb1bf57c572bcfb, type: 3}
+  targetNum: 0
+  totalTargets: 1
+  hitCount: 0
 --- !u!65 &1637784452942694886
 BoxCollider:
   m_ObjectHideFlags: 0

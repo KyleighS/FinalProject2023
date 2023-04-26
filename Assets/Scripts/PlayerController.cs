@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class PlayerController : MonoBehaviour
 {
@@ -13,6 +14,9 @@ public class PlayerController : MonoBehaviour
     void Start()
     {
         Time.timeScale = 1f;
+        victory.SetActive(false);
+        cursor.SetActive(true);
+        Cursor.visible = false;
     }
 
     // Update is called once per frame
@@ -45,14 +49,19 @@ public class PlayerController : MonoBehaviour
     {
         if(collision.gameObject.tag == "NextLevel")
         {
+            SceneManager.LoadScene("Level_2");
+        }
+        if (collision.gameObject.tag == "Completed")
+        {
             VictoryScreen();
         }
     }
 
     public void VictoryScreen()
     {
-        victory.SetActive(!victory.activeSelf);
-        cursor.SetActive(!cursor.activeSelf);
+        victory.SetActive(true);
+        cursor.SetActive(false);
+        Cursor.visible = true;
 
         if (victory.activeSelf)
         {
